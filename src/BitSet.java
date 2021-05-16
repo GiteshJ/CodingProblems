@@ -20,6 +20,13 @@ public class BitSet {
 			bitset[wordNumber] |= 1 << bitNumber;
 		}
 		
+		 void unset(int pos)
+        {
+			int wordNumber = (pos >> 5);
+			int bitNumber = (pos & 0x1F);
+			bitset[wordNumber] &= ~(1 << bitNumber);
+        }
+		
 		public static void main(String[] args) {
 			
 			BitSet bs = new BitSet(32000);
