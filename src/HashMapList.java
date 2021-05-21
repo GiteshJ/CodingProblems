@@ -4,7 +4,12 @@ import java.util.Set;
 
 public class HashMapList<T,E> {
 
-	private HashMap<T, ArrayList<E>> map = new HashMap<T, ArrayList<E>>();
+	
+	private HashMap<T, ArrayList<E>> map ; 
+	
+	public HashMapList() {
+		map = new HashMap<T, ArrayList<E>>();
+	}
 	
 	public void put(T key, E item) {
 		if(!map.containsKey(key)) map.put(key, new ArrayList<E>());
